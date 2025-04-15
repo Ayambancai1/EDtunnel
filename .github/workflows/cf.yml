@@ -62,6 +62,10 @@ jobs:
         with:
           ref: ${{ env.GIT_REF }}
           fetch-depth: 0
+      -name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "latest"
 
       - name: 🛸 Env?
         # 'dev' env deploys to default WORKERS_ENV, which is, '' (an empty string)
